@@ -6,11 +6,11 @@ const PORT = 3000;
 
 app.get('/', async (req, res) => {
   try {
-    const response = await axios.get('http://app-b.default.svc.cluster.local:4000/data');
+    const response = await axios.get('http://app-b.default.svc.cluster.local/data');
     res.send(`Received from B: ${response.data}`);
   } catch (err) {
-    res.send('Failed to reach app B');
+    res.send('Failed to reach app B' + err);
   }
 });
 
-app.listen(PORT, () => console.log(`App A listening on ${PORT}`));
+app.listen(PORT, () => console.log(`App A listening on ${PORT} localhost test`));
