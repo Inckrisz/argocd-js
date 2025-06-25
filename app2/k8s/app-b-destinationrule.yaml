@@ -4,7 +4,7 @@ metadata:
   name: app-b
   namespace: default
 spec:
-  host: app-b
+  host: app-b.default.svc.cluster.local
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL
