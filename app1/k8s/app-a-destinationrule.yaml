@@ -1,10 +1,10 @@
 apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
-  name: spring-boot-app
+  name: app-a
   namespace: default
 spec:
-  host: spring-boot-app
+  host: app-a
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL
