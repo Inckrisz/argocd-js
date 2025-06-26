@@ -11,7 +11,7 @@ spec:
   source: 
     path: app2
     repoURL: "https://github.com/Inckrisz/argocd-js"
-    targetRevision: master
+    targetRevision: main
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
