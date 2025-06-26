@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata: 
+  name: app1
+  namespace: argocd
+spec: 
+  destination: 
+    namespace: app1
+    server: "https://kubernetes.default.svc"
+  project: default
+  source: 
+    path: app1
+    repoURL: "https://github.com/Inckrisz/argocd-js"
+    targetRevision: master
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
