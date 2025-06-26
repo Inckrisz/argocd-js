@@ -9,9 +9,9 @@ spec:
     server: "https://kubernetes.default.svc"
   project: default
   source: 
-    path: app1
+    path: app1/k8s
     repoURL: "https://github.com/Inckrisz/argocd-js"
-    targetRevision: master
+    targetRevision: main
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
