@@ -9,7 +9,7 @@ spec:
     server: "https://kubernetes.default.svc"
   project: default
   source: 
-    path: app2
+    path: app2/k8s
     repoURL: "https://github.com/Inckrisz/argocd-js"
     targetRevision: main
   syncPolicy:
