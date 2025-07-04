@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: istio-platform
+  namespace: argo
+spec:
+  project: default
+  source:
+    repoURL: "https://github.com/Inckrisz/argocd-js"
+    targetRevision: HEAD
+    path: platform
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argo
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
