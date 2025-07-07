@@ -5,6 +5,3 @@ metadata:
   namespace: default
 spec:
   host:  app-a.default.svc.cluster.local
-  trafficPolicy:
-    tls:
-      mode: ISTIO_MUTUAL
