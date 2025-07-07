@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   hosts:
-    - "*"
+    - app2.demo.hu
   gateways:
     - js-app-gateway
   http:
