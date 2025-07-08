@@ -12,6 +12,8 @@ spec:
     - match:
         - uri:
             prefix: /
+      rewrite:
+        uri: /data
       route:
         - destination:
             host: app-a.default.svc.cluster.local
