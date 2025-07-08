@@ -7,6 +7,7 @@ spec:
   hosts:
     - app1.demo.hu
   gateways:
+    - mesh
     - js-app-gateway
   http:
     - match:
