@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Inckrisz/argocd-js.git
-    targetRevision: HEAD
+    targetRevision: helming
     path: platform
     helm:
       valueFiles:

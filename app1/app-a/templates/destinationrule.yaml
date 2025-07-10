@@ -1,0 +1,7 @@
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: {{ .Values.name }}
+  namespace: default
+spec:
+  host: {{ .Values.name }}.default.svc.cluster.local
