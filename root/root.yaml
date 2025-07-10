@@ -1,8 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-   name: root-app
-   namespace: default
+  name: root-app
+  namespace: default
 spec:
   project: default
   source:
