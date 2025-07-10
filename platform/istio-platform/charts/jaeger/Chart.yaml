@@ -1,0 +1,6 @@
+apiVersion: v2
+name: jaeger
+description: A Helm chart for Jaeger
+type: application
+version: 0.71.14
+appVersion: 1.0.0
