@@ -1,3 +1,4 @@
 name: app-b
+namespace: app-b
 image: ghcr.io/inckrisz/app2-js:latest
 virtualHost: app2.demo.hu
