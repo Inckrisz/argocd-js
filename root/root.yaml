@@ -1,18 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root-app
+  name: root-apps
   namespace: argo
 spec:
   project: default
   source:
-     repoURL: https://github.com/Inckrisz/argocd-js.git
-     targetRevision: helming
-     path: app-of-apps/
+    repoURL: https://github.com/Inckrisz/argocd-js
+    targetRevision: helming
+    path: app-of-apps
   destination:
-     server: https://kubernetes.default.svc
-     namespace: default
+    server: https://kubernetes.default.svc
+    namespace: argo
   syncPolicy:
-     automated:
-       prune: true
-       selfHeal: true
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - Createnamespace=true
