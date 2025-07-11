@@ -1,23 +1,23 @@
-
-
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: istio-platform
-  namespace: argo
+  name: istio-platform
+  namespace: argo
 spec:
-  project: default
-  source:
-    repoURL: https://github.com/Inckrisz/argocd-js.git
-    targetRevision: helming
-    path: platform
-    helm:
-      valueFiles:
-        - values.yaml
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: default
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+  project: default
+  source:
+    repoURL: https://github.com/Inckrisz/argocd-js.git
+    targetRevision: helming
+    path: platform/
+    helm:
+     valueFiles:
+      - values.yaml
+  destination:
+   server: https://kubernetes.default.svc
+   namespace: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true

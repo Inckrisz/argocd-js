@@ -1,23 +1,23 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-a
-  namespace: argo
+  name: app-a
+  namespace: argo
 spec:
-  project: default
-  source:
-    repoURL: https://github.com/Inckrisz/argocd-js.git
-    targetRevision: helming
-    path: app1/
-    helm:
-      valueFiles:
-        - values.yaml
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: default
-  syncPolicy:
+  project: default
+  source:
+    repoURL: https://github.com/Inckrisz/argocd-js.git
+    targetRevision: helming
+    path: app1/
+    helm:
+     valueFiles:
+      - values.yaml
+  destination:
+   server: https://kubernetes.default.svc
+   namespace: default
+  syncPolicy:
     syncOptions:
       - CreateNamespace=true
-    automated:
-      prune: true
-      selfHeal: true
+    automated:
+      prune: true
+      selfHeal: true
