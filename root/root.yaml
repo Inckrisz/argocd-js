@@ -11,7 +11,7 @@ spec:
      path: app-of-apps/
   destination:
      server: https://kubernetes.default.svc
-     namespace: default
+     namespace: argo
   syncPolicy:
      automated:
        prune: true
