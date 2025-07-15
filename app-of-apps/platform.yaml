@@ -7,8 +7,9 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Inckrisz/argocd-js.git
-    targetRevision: helming
-    path: istio-platform
+    targetRevision: helming2
+    chart: istio-platform
+    path: docs
     helm:
      valueFiles:
       - values.yaml
