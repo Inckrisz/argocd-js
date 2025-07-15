@@ -1,0 +1,57 @@
+apiVersion: v1
+entries:
+  app1:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2025-07-15T15:10:02.501176517+02:00"
+    description: A Helm chart for app1
+    digest: b3ac03fdf91d192f259216590cc6e8691c095d9aaecd7c7d0f55f3970496a6e6
+    name: app1
+    urls:
+    - https://inckrisz.github.io/argocd-js/docs/app1-0.1.0.tgz
+    version: 0.1.0
+  app2:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2025-07-15T15:10:02.501673378+02:00"
+    description: A Helm chart for app1
+    digest: 6678b9facb5f577b37548fbb9d1b98055a86a1f02a694aafa9511d123158df87
+    name: app2
+    urls:
+    - https://inckrisz.github.io/argocd-js/docs/app2-0.1.0.tgz
+    version: 0.1.0
+  istio-platform:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-07-15T15:10:02.503394205+02:00"
+    dependencies:
+    - alias: istio-base
+      name: istio-base
+      repository: https://istio-release.storage.googleapis.com/charts
+      version: 1.26.0
+    - name: istio-ingressgateway
+      repository: https://istio-release.storage.googleapis.com/charts
+      version: 1.26.0
+    - name: istiod
+      repository: https://istio-release.storage.googleapis.com/charts
+      version: 1.22.0
+    - name: kiali
+      repository: https://kiali.org/helm-charts
+      version: 1.82.0
+    - name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 25.21.0
+    - name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.56.0
+    - name: jaeger
+      repository: https://jaegertracing.github.io/helm-charts
+      version: 0.71.14
+    description: A Helm chart for deploying Istio platform components
+    digest: 88d61cc816508698a13f7597df12466cf4f525d63d12fb2e22d8cd3ecd6c27dd
+    name: istio-platform
+    type: application
+    urls:
+    - https://inckrisz.github.io/argocd-js/docs/istio-platform-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-07-15T15:10:02.499915664+02:00"
