@@ -18,6 +18,6 @@ spec:
           ports:
             - containerPort: 3000
         - name: busybox
-          image: busybox
-          command: ["sh", "-c", "while true; do curl http://app-b:4000; sleep 10; do curl http://app-b:4000/data; sleep 10 ;done"]
+          image: busybox          
+          command: ["sh", "-c", "while true; do curl http://app-b:4000/data; sleep 10; done"]
           imagePullPolicy: IfNotPresent
