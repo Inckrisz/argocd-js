@@ -6,9 +6,10 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Inckrisz/argocd-js.git
-    targetRevision: helming
-    path: app1/
+    repoURL: https://inckrisz.github.io/argocd-js
+    targetRevision: helming2
+    chart: app1
+    path: docs
     helm:
      valueFiles:
       - values.yaml
