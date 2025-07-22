@@ -3,27 +3,27 @@ entries:
   app1:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2025-07-15T15:10:02.501176517+02:00"
+    created: "2025-07-22T14:28:40.392943311+02:00"
     description: A Helm chart for app1
-    digest: b3ac03fdf91d192f259216590cc6e8691c095d9aaecd7c7d0f55f3970496a6e6
+    digest: ec4aa89c0efd8e376692891ad7603632cc22c47d626459e6565e00f2f3d0f4e4
     name: app1
     urls:
-    - https://inckrisz.github.io/argocd-js/docs/app1-0.1.0.tgz
+    - app1-0.1.0.tgz
     version: 0.1.0
   app2:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2025-07-15T15:10:02.501673378+02:00"
+    created: "2025-07-22T14:28:40.393420478+02:00"
     description: A Helm chart for app1
     digest: 6678b9facb5f577b37548fbb9d1b98055a86a1f02a694aafa9511d123158df87
     name: app2
     urls:
-    - https://inckrisz.github.io/argocd-js/docs/app2-0.1.0.tgz
+    - app2-0.1.0.tgz
     version: 0.1.0
   istio-platform:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-15T15:10:02.503394205+02:00"
+    created: "2025-07-22T14:28:40.394427931+02:00"
     dependencies:
     - alias: istio-base
       name: istio-base
@@ -52,6 +52,6 @@ entries:
     name: istio-platform
     type: application
     urls:
-    - https://inckrisz.github.io/argocd-js/docs/istio-platform-0.1.0.tgz
+    - istio-platform-0.1.0.tgz
     version: 0.1.0
-generated: "2025-07-15T15:10:02.499915664+02:00"
+generated: "2025-07-22T14:28:40.391895065+02:00"
