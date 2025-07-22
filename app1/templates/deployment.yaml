@@ -17,8 +17,8 @@ spec:
           image: ghcr.io/inckrisz/app1-js:latest
           ports:
             - containerPort: 3000
-        - name: busybox
-          image: busybox          
-          command: ["sh", "-c", "while true; do curl http://app-b:4000/data; sleep 10; done"]
-          imagePullPolicy: IfNotPresent
-          restartPolicy: Never
+        # - name: busybox
+        #   image: busybox          
+        #   command: ["sh", "-c", "while true; do curl http://app-b:4000/data; sleep 10; done"]
+        #   imagePullPolicy: IfNotPresent
+        #   restartPolicy: Never
