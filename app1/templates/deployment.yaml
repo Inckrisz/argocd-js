@@ -17,7 +17,12 @@ spec:
           image: ghcr.io/inckrisz/app1-js:latest
           ports:
             - containerPort: 3000
-        - name: asd
-          image: ghcr.io/inckrisz/app1-js:latest
-          ports:
-            - containerPort: 5000
+        - name: traffic-simulator
+          image: curlimages/curl
+          command: ["/bin/sh", "-c"]
+          args:
+            - |
+              while true; do
+                curl --retry 3 --retry-delay 2 --connect-timeout 5 http://app-b.default.svc.cluster.local:4000/data;
+                sleep 30;
+              done
