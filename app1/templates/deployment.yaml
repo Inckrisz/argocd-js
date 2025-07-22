@@ -21,3 +21,4 @@ spec:
           image: busybox          
           command: ["sh", "-c", "while true; do curl http://app-b:4000/data; sleep 10; done"]
           imagePullPolicy: IfNotPresent
+          restartPolicy: Never
