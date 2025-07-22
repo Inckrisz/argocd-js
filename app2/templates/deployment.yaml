@@ -21,7 +21,8 @@ spec:
           image: curlimages/curl
           command: ["/bin/sh", "-c"]
           args:
-            - while true; do
-                curl --retry 3 --retry-delay 2 --connect-timeout 5 http://app-b.default.svc.cluster.local:4000/data;
+            - |
+              while true; do
+                curl --retry 3 --retry-delay 2 --connect-timeout 5 http://app-a.default.svc.cluster.local:3000/data;
                 sleep 30;
               done
